@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>serviio</Name>
+  <Repository>soerentsch/serviio</Repository>
+  <Registry>https://hub.docker.com/r/soerentsch/serviio</Registry>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/soerentsch/docker-serviio</Support>
+  <Project>https://serviio.org/</Project>
+  <Overview>Fastest and Smallest container with DLNA Server based on Serviio 2.2.1, FFmpeg 5.0 and Jasper 3.0.3 or newer</Overview>
+  <Category>MediaApp:Video MediaApp:Music MediaApp:Photos MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
+  <WebUI>http://[IP]:[PORT:23423]/console</WebUI>
+  <Icon>https://i.imgur.com/Pcals31.png</Icon>
+  <DonateText>Help support my work by buying me a beer</DonateText>
+  <DonateLink>https://paypal.me/SoerenSchwirsch</DonateLink>
+  <Description>Serviio is a freeware media server designed to let users stream music, video, or image files to DLNA compliant televisions, Blu-ray players, game consoles, and Android or Windows Mobile devices on a home network.&#xD;
+    Make be sure to give it some then restart the container at least once. If you want to use a custom config you need to map the path: /opt/serviio/config to your AppData install directory.</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1900</HostPort>
+        <ContainerPort>1900</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8895</HostPort>
+        <ContainerPort>8895</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>23423</HostPort>
+        <ContainerPort>23423</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>23424</HostPort>
+        <ContainerPort>23424</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>23523</HostPort>
+        <ContainerPort>23523</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>23524</HostPort>
+        <ContainerPort>23524</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/media/</HostDir>
+      <ContainerDir>/media/serviio</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/serviio/library</HostDir>
+      <ContainerDir>/opt/serviio/library</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/serviio/plugins</HostDir>
+      <ContainerDir>/opt/serviio/plugins</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/serviio/log</HostDir>
+      <ContainerDir>/opt/serviio/log</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="DLNA" Target="1900" Default="" Mode="udp" Description="Container Port: 1900" Type="Port" Display="always" Required="false" Mask="false">1900</Config>
+  <Config Name="Host Port 2" Target="8895" Default="" Mode="tcp" Description="Container Port: 8895" Type="Port" Display="always" Required="false" Mask="false">8895</Config>
+  <Config Name="Webconsole (HTTP)" Target="23423" Default="" Mode="tcp" Description="Container Port: 23423" Type="Port" Display="always" Required="false" Mask="false">23423</Config>
+  <Config Name="Mediabrowser (HTTP)" Target="23424" Default="" Mode="tcp" Description="Container Port: 23424" Type="Port" Display="always" Required="false" Mask="false">23424</Config>
+  <Config Name="Media path" Target="/media/serviio" Default="" Mode="rw" Description="Container Path: /media/serviio" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/media/</Config>
+  <Config Name="Serviio DB path" Target="/opt/serviio/library" Default="" Mode="rw" Description="Container Path: /opt/serviio/library" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/serviio/library</Config>
+  <Config Name="Serviio plugins path" Target="/opt/serviio/plugins" Default="" Mode="rw" Description="Container Path: /opt/serviio/plugins" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/serviio/plugins</Config>
+  <Config Name="Serviio log path" Target="/opt/serviio/log" Default="" Mode="rw" Description="Container Path: /opt/serviio/log" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/serviio/log</Config>
+  <Config Name="Webconsole (HTTPS)" Target="23523" Default="" Mode="tcp" Description="Container Port: 23523" Type="Port" Display="always" Required="false" Mask="false">23523</Config>
+  <Config Name="Mediabrowser (HTTPS)" Target="23524" Default="" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">23524</Config>
+</Container>
