@@ -8,7 +8,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/soerentsch/docker-serviio</Support>
   <Project>https://serviio.org/</Project>
-  <Overview>Fastest and Smallest container with DLNA Server based on Serviio 2.2.1, FFmpeg 5.0 and Jasper 3.0.3 or newer</Overview>
+  <Overview>Fastest and Smallest container with DLNA Server based on Serviio 2.2.1 (fixed CVE-2021-44228 vulnerability caused by Log4j library), FFmpeg 5.0 and Jasper 3.0.3 or newer</Overview>
   <Category>MediaApp:Video MediaApp:Music MediaApp:Photos MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
   <WebUI>http://[IP]:[PORT:23423]/console</WebUI>
   <Icon>https://i.imgur.com/Pcals31.png</Icon>
@@ -74,7 +74,7 @@
   <Environment/>
   <Labels/>
   <Config Name="DLNA" Target="1900" Default="" Mode="udp" Description="Container Port: 1900" Type="Port" Display="always" Required="false" Mask="false">1900</Config>
-  <Config Name="Host Port 2" Target="8895" Default="" Mode="tcp" Description="Container Port: 8895" Type="Port" Display="always" Required="false" Mask="false">8895</Config>
+  <Config Name="Serviio Content Delivery" Target="8895" Default="" Mode="tcp" Description="Container Port: 8895" Type="Port" Display="always" Required="false" Mask="false">8895</Config>
   <Config Name="Webconsole (HTTP)" Target="23423" Default="" Mode="tcp" Description="Container Port: 23423" Type="Port" Display="always" Required="false" Mask="false">23423</Config>
   <Config Name="Mediabrowser (HTTP)" Target="23424" Default="" Mode="tcp" Description="Container Port: 23424" Type="Port" Display="always" Required="false" Mask="false">23424</Config>
   <Config Name="Media path" Target="/media/serviio" Default="" Mode="rw" Description="Container Path: /media/serviio" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/media/</Config>
@@ -82,5 +82,5 @@
   <Config Name="Serviio plugins path" Target="/opt/serviio/plugins" Default="" Mode="rw" Description="Container Path: /opt/serviio/plugins" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/serviio/plugins</Config>
   <Config Name="Serviio log path" Target="/opt/serviio/log" Default="" Mode="rw" Description="Container Path: /opt/serviio/log" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/serviio/log</Config>
   <Config Name="Webconsole (HTTPS)" Target="23523" Default="" Mode="tcp" Description="Container Port: 23523" Type="Port" Display="always" Required="false" Mask="false">23523</Config>
-  <Config Name="Mediabrowser (HTTPS)" Target="23524" Default="" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">23524</Config>
+  <Config Name="Mediabrowser (HTTPS)" Target="23524" Default="" Mode="tcp" Description="Container Port: 23524" Type="Port" Display="always" Required="false" Mask="false">23524</Config>
 </Container>
