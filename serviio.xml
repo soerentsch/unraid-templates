@@ -8,7 +8,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/soerentsch/docker-serviio</Support>
   <Project>https://serviio.org/</Project>
-  <Overview>Fastest and Smallest container with DLNA Server based on Serviio 2.2.1 (fixed CVE-2021-44228 vulnerability caused by Log4j library), OpenJDK 17, FFmpeg 5.0 and Jasper 3.0.3 or newer</Overview>
+  <Overview>Fastest and Smallest container with DLNA Server based on Serviio 2.2.1, OpenJDK 17, FFmpeg 5.0.1 and Jasper 3.0.3 or newer</Overview>
   <Category>MediaApp:Video MediaApp:Music MediaApp:Photos MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
   <WebUI>http://[IP]:[PORT:23423]/console</WebUI>
   <Icon>https://i.imgur.com/Pcals31.png</Icon>
