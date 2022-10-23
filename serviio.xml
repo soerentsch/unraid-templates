@@ -8,12 +8,13 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/soerentsch/docker-serviio</Support>
   <Project>https://serviio.org/</Project>
-  <Overview>Fastest and Smallest container with DLNA Server based on Serviio 2.2.1, OpenJDK 17, FFmpeg 5.1.2 and Jasper 3.0.6 or newer</Overview>
+  <Overview>Serviio 2.3 media and DLNA server. Based on FFmpeg 5.1.2, Jasper 3.0.6 and OpenJDK 17 or newer</Overview>
   <Category>MediaApp:Video MediaApp:Music MediaApp:Photos MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
   <WebUI>http://[IP]:[PORT:23423]/console</WebUI>
   <Icon>https://i.imgur.com/Pcals31.png</Icon>
   <Description>Serviio is a freeware media server designed to let users stream music, video, or image files to DLNA compliant televisions, Blu-ray players, game consoles, and Android or Windows Mobile devices on a home network.&#xD;
     Make be sure to give it some then restart the container at least once. If you want to use a custom config you need to map the path: /opt/serviio/config to your AppData install directory.</Description>
+  <Changes>Update Serviio to 2.3</Changes>
   <Networking>
     <Mode>host</Mode>
     <Publish>
