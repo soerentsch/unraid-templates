@@ -14,8 +14,11 @@
   <Icon>https://i.imgur.com/Pcals31.png</Icon>
   <Description>Serviio is a freeware media server designed to let users stream music, video, or image files to DLNA compliant televisions, Blu-ray players, game consoles, and Android or Windows Mobile devices on a home network.&#xD;
     Make be sure to give it some then restart the container at least once. If you want to use a custom config you need to map the path: /opt/serviio/config to your AppData install directory.</Description>
-  <Date>2023-03-06</Date>
+  <Date>2023-03-31</Date>
   <Changes>
+### 2023-03-31
+- Update alpine to 3.17.3.
+
 ### 2023-03-06
 - Update FFmpeg to 6.0. Many minor alpine updates.
 
@@ -44,9 +47,6 @@
 - Update Serviio to 2.3.
 - Update OpenJDK to 17.0.5_p8. Many minor alpine updates.
 
-### 2022-09-29
-- Update FFmpeg to 5.1.2. Many minor alpine updates.
-    
   </Changes>
   <Networking>
     <Mode>host</Mode>
