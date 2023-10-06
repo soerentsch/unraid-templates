@@ -16,6 +16,9 @@
     Make be sure to give it some then restart the container at least once. If you want to use a custom config you need to map the path: /opt/serviio/config to your AppData install directory.</Description>
   <Date>2023-08-11</Date>
   <Changes>
+### 2023-10-06
+- Update alpine to 3.18.4.
+
 ### 2023-08-11
 - Update alpine to 3.18.3.
 
