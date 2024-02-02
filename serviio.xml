@@ -8,7 +8,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/soerentsch/docker-serviio</Support>
   <Project>https://serviio.org/</Project>
-  <Overview>Serviio 2.3 media and DLNA server. Based on FFmpeg 6.0, Jasper 4.0 and OpenJDK 17 or newer</Overview>
+  <Overview>Serviio 2.3 media and DLNA server. Based on Alpine Linux Edge</Overview>
   <Category>MediaApp:Video MediaApp:Music MediaApp:Photos MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
   <WebUI>http://[IP]:[PORT:23423]/console</WebUI>
   <Icon>https://i.imgur.com/Pcals31.png</Icon>
