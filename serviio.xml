@@ -8,7 +8,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/soerentsch/docker-serviio</Support>
   <Project>https://serviio.org/</Project>
-  <Overview>Serviio 2.3 media and DLNA server. Based on Alpine Linux Edge</Overview>
+  <Overview>Serviio media and DLNA server. Based on Alpine Linux Edge</Overview>
   <Category>MediaApp:Video MediaApp:Music MediaApp:Photos MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
   <WebUI>http://[IP]:[PORT:23423]/console</WebUI>
   <Icon>https://i.imgur.com/Pcals31.png</Icon>
@@ -17,6 +17,7 @@
   <Date>2024-06-11</Date>
   <Changes>
 ### 2024-06-11
+- Update serviio to 2.4.
 - Update alpine to 3.20.0.
 
 ### 2024-04-02
